@@ -1,0 +1,1700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Homes | Premium Properties</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        /* Header Styles */
+        .main-header {
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+        
+        .logo-text h1 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #2c3e50;
+        }
+        
+        .logo-text span {
+            color: #3498db;
+        }
+        
+        .logo-text p {
+            font-size: 12px;
+            color: #7f8c8d;
+            margin-top: -5px;
+        }
+        
+        /* Navigation */
+        .main-nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        .main-nav li {
+            margin-left: 30px;
+            position: relative;
+        }
+        
+        .main-nav a {
+            text-decoration: none;
+            color: #34495e;
+            font-weight: 600;
+            font-size: 16px;
+            transition: color 0.3s;
+            display: flex;
+            align-items: center;
+        }
+        
+        .main-nav a:hover {
+            color: #3498db;
+        }
+        
+        .main-nav a i {
+            margin-right: 5px;
+        }
+        
+        /* Call to Action Button */
+        .cta-button {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .cta-button:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+        }
+        
+        /* Mobile Menu Toggle */
+        .mobile-menu-toggle {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: #2c3e50;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .main-nav {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 80%;
+                height: calc(100vh - 80px);
+                background-color: white;
+                box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+                transition: left 0.3s ease;
+                z-index: 999;
+            }
+            
+            .main-nav.active {
+                left: 0;
+            }
+            
+            .main-nav ul {
+                flex-direction: column;
+                padding: 20px;
+            }
+            
+            .main-nav li {
+                margin: 15px 0;
+            }
+            
+            .mobile-menu-toggle {
+                display: block;
+            }
+            
+            .cta-button {
+                margin-top: 20px;
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+    <!--header style end-->
+    <!--property style start -->
+     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+        }
+        
+        .slider-container {
+            position: relative;
+            max-width: 1200px;
+            margin: 50px auto;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            height: 500px;
+        }
+        
+        .slide {
+            min-width: 100%;
+            position: relative;
+        }
+        
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .slide-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 30px;
+        }
+        
+        .slide-content h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        
+        .slide-content p {
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+        
+        .slide-content .price {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ff9800;
+        }
+        
+        .slider-nav {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+            z-index: 10;
+        }
+        
+        .slider-nav button {
+            background: rgba(255, 255, 255, 0.5);
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 20px;
+            color: #333;
+            margin: 0 20px;
+            transition: all 0.3s;
+        }
+        
+        .slider-nav button:hover {
+            background: rgba(255, 255, 255, 0.8);
+        }
+        
+        .slider-dots {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            z-index: 10;
+        }
+        
+        .slider-dots .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            margin: 0 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        .slider-dots .dot.active {
+            background: #ff9800;
+        }
+        
+        @media (max-width: 768px) {
+            .slider-container {
+                height: 400px;
+            }
+            
+            .slide-content {
+                padding: 20px;
+            }
+            
+            .slide-content h2 {
+                font-size: 22px;
+            }
+            
+            .slide-content p {
+                font-size: 14px;
+            }
+            
+            .slide-content .price {
+                font-size: 20px;
+            }
+        }
+    </style>
+    <!--property style end-->
+    <!--About us style -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .container {
+            display: flex;
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .content {
+            flex: 1;
+            padding: 20px;
+        }
+        .image-container {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        p {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        .features {
+            margin-top: 30px;
+        }
+        .feature-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .feature-icon {
+            margin-right: 15px;
+            color: #3498db;
+            font-size: 20px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #2980b9;
+        }
+    </style>
+    <!--About us style end-->
+    <!--footer style start-->
+     <style>
+        /* Footer Styles */
+        .footer {
+            margin-top: 50px;
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 50px 0 20px;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+        
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 30px;
+            padding: 0 15px;
+        }
+        
+        .footer-logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #3498db;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+        
+        .footer-description {
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #bdc3c7;
+        }
+        
+        .footer-social {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-icon {
+            color: #ecf0f1;
+            font-size: 20px;
+            transition: color 0.3s;
+        }
+        
+        .social-icon:hover {
+            color: #3498db;
+        }
+        
+        .footer-heading {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #ecf0f1;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-heading::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 2px;
+            background-color: #3498db;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #bdc3c7;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: #3498db;
+            padding-left: 5px;
+        }
+        
+        .contact-info {
+            list-style: none;
+        }
+        
+        .contact-info li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .contact-icon {
+            color: #3498db;
+            margin-right: 10px;
+            font-size: 18px;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            margin-top: 30px;
+            border-top: 1px solid #34495e;
+            color: #bdc3c7;
+            font-size: 14px;
+        }
+        
+        @media (max-width: 768px) {
+            .footer-section {
+                flex: 100%;
+                margin-bottom: 30px;
+            }
+        }
+    </style>
+    <!--footer style end-->
+    <!--form style start-->
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #333;
+        }
+        
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.6);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            max-width: 600px;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 25px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        
+        textarea {
+            height: 120px;
+            resize: vertical;
+        }
+        
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+        
+        button:hover {
+            background-color: #2980b9;
+        }
+        
+        .property-select {
+            margin-bottom: 30px;
+        }
+        
+        .property-select select {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        
+        @media (max-width: 768px) {
+            .form-container {
+                padding: 20px;
+            }
+        }
+    </style>
+    <!--form stle end-->
+    <!--testinomials style start -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+        }
+        
+        .testimonials-section {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        
+        .section-title {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 40px;
+            font-size: 2.5rem;
+        }
+        
+        .testimonials-container {
+            position: relative;
+            height: 400px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .testimonial-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding: 40px;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        
+        .testimonial-slide.active {
+            opacity: 1;
+        }
+        
+        .testimonial-content {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 30px;
+            max-width: 800px;
+            position: relative;
+        }
+        
+        .testimonial-content::before,
+        .testimonial-content::after {
+            content: '"';
+            font-size: 3rem;
+            color: #3498db;
+            opacity: 0.3;
+            position: absolute;
+        }
+        
+        .testimonial-content::before {
+            top: -20px;
+            left: -30px;
+        }
+        
+        .testimonial-content::after {
+            bottom: -40px;
+            right: -30px;
+        }
+        
+        .client-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .client-photo {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+            border: 3px solid #3498db;
+        }
+        
+        .client-name {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        
+        .client-position {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+        
+        .dots-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        
+        .dot {
+            width: 12px;
+            height: 12px;
+            margin: 0 5px;
+            background-color: #bdc3c7;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .dot.active {
+            background-color: #3498db;
+        }
+        
+        @media (max-width: 768px) {
+            .testimonials-container {
+                height: 500px;
+            }
+            
+            .testimonial-content {
+                font-size: 1rem;
+            }
+        }
+    </style>
+    <!--testinomial style end-->
+    <!--whats app style start-->
+    <style>
+        /* WhatsApp Button Styles */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+            z-index: 100;
+            transition: all 0.4s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .whatsapp-float:hover {
+            background-color: #128C7E;
+            transform: scale(1.05);
+            box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .whatsapp-float::before,
+        .whatsapp-float::after {
+            content: '';
+            position: absolute;
+            border: 2px solid #25d366;
+            border-radius: 50%;
+            animation: pulse 2s linear infinite;
+            opacity: 0;
+        }
+        
+        .whatsapp-float::after {
+            animation-delay: 1s;
+        }
+        
+        .whatsapp-float:hover::before,
+        .whatsapp-float:hover::after {
+            opacity: 1;
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(0.5);
+                opacity: 0;
+            }
+            50% {
+                opacity: 0.5;
+            }
+            100% {
+                transform: scale(1.5);
+                opacity: 0;
+            }
+        }
+        
+        /* Tooltip styles */
+        .whatsapp-tooltip {
+            position: absolute;
+            right: 70px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #333;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 4px;
+            font-size: 14px;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+        }
+        
+        .whatsapp-float:hover .whatsapp-tooltip {
+            opacity: 1;
+            visibility: visible;
+            right: 75px;
+        }
+        
+        .whatsapp-tooltip::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            margin-top: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent transparent transparent #333;
+        }
+        
+        @media (max-width: 768px) {
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                bottom: 20px;
+                right: 20px;
+                font-size: 25px;
+            }
+            
+            .whatsapp-tooltip {
+                display: none;
+            }
+        }
+    </style>
+    <!--whatsapp style end-->
+    <!--agnt style start-->
+     <style>
+      
+        
+        .agents-container {
+            display: flex;
+            flex-direction: row-reverse; /* This makes it right-to-left */
+            justify-content: center; /* Align to the right side */
+            flex-wrap: wrap;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .agent-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            width: 200px;
+            text-align: center;
+            padding: 15px;
+            transition: transform 0.3s;
+        }
+        
+        .agent-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .agent-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 15px;
+            display: block;
+            border: 3px solid #e6e6e6;
+        }
+        
+        .agent-name {
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        
+        .agent-city {
+            color: #666;
+            margin-bottom: 10px;
+        }
+        
+        .agent-contact {
+            color: #2a6496;
+            font-size: 14px;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+    </style>
+    <!--agent style end-->
+    <!--locations style start-->
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        
+        .cities-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .city-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 220px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .city-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        }
+        
+        .city-image {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+        
+        .city-info {
+            padding: 15px;
+            text-align: center;
+        }
+        
+        .city-name {
+            font-weight: 700;
+            font-size: 20px;
+            margin-bottom: 8px;
+            color: #2c3e50;
+        }
+        
+        .city-location {
+            color: #7f8c8d;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 40px;
+            padding-top: 20px;
+            font-size: 32px;
+        }
+        
+        .highlight {
+            color: #e74c3c;
+        }
+    </style>
+    <!--locations style end-->
+
+</head>
+<body>
+    <!--Header section start-->
+    <section id="Home">
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo">
+                <img src="https://thumbs.dreamstime.com/b/circle-home-plant-logo-house-building-architecture-real-estate-nature-symbol-icon-design-vector-logotype-home-house-real-estate-130802252.jpg" alt="Luxury Homes Logo">
+                <div class="logo-text">
+                    <h1><span>Luxury</span>Homes</h1>
+                    <p>Premium Properties Worldwide</p>
+                </div>
+            </div>
+            
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#Home"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="#Properties"><i class="fas fa-building"></i> Properties</a></li>
+                    <li><a href="#Locations"><i class="fas fa-map-marker-alt"></i> Locations</a></li>
+                    <li><a href="#Agents"><i class="fas fa-users"></i> Agents</a></li>
+                    <li><a href="#Contact"><i class="fas fa-envelope"></i> Contact</a></li>
+                    <li><button class="cta-button"><i class="fas fa-phone-alt"></i> 7739662802</button></li>
+                </ul>
+            </nav>
+            
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+    <!--header section end-->
+    <!--property section start-->
+    </section>
+    <section id="Properties">
+    <div class="slider-container">
+        <div class="slider">
+            <!-- Slide 1 -->
+            <div class="slide">
+                <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Luxury Villa">
+                <div class="slide-content">
+                    <h2>Modern Luxury Villa</h2>
+                    <p>5 bedrooms | 4 bathrooms | 3,500 sqft</p>
+                    <p class="price">$1,250,000</p>
+                </div>
+            </div>
+            
+            <!-- Slide 2 -->
+            <div class="slide">
+                <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Downtown Apartment">
+                <div class="slide-content">
+                    <h2>Downtown Apartment</h2>
+                    <p>2 bedrooms | 2 bathrooms | 1,200 sqft</p>
+                    <p class="price">$650,000</p>
+                </div>
+            </div>
+            
+            <!-- Slide 3 -->
+            <div class="slide">
+                <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Suburban Home">
+                <div class="slide-content">
+                    <h2>Suburban Family Home</h2>
+                    <p>4 bedrooms | 3 bathrooms | 2,800 sqft</p>
+                    <p class="price">$850,000</p>
+                </div>
+            </div>
+            
+            <!-- Slide 4 -->
+            <div class="slide">
+                <img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Penthouse">
+                <div class="slide-content">
+                    <h2>Luxury Penthouse</h2>
+                    <p>3 bedrooms | 3.5 bathrooms | 3,200 sqft</p>
+                    <p class="price">$2,100,000</p>
+                </div>
+            </div>
+            
+            <!-- Slide 5 -->
+            <div class="slide">
+                <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Country House">
+                <div class="slide-content">
+                    <h2>Countryside Estate</h2>
+                    <p>6 bedrooms | 5 bathrooms | 5,000 sqft</p>
+                    <p class="price">$1,750,000</p>
+                </div>
+            </div>
+        </div>
+        </section>
+       
+        <!-- Navigation Arrows -->
+        <div class="slider-nav">
+            <button class="prev-slide">&#10094;</button>
+            <button class="next-slide">&#10095;</button>
+        </div>
+        
+        <!-- Dots Navigation -->
+        <div class="slider-dots">
+            <div class="dot active"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+    </div>
+     <!--property section end-->
+     <!--about us section start-->
+    <section id="About_Us">
+    <div class="container">
+        <div class="content">
+            <h1>Prime Homes - Luxury Living Redefined</h1>
+            <p>Welcome to Prime Homes, where luxury meets comfort in the most exquisite way. Our properties are designed to offer you an unparalleled living experience with attention to every detail.</p>
+            
+            <div class="features">
+                <div class="feature-item">
+                    <span class="feature-icon">✓</span>
+                    <span>Premium locations in the city's most sought-after neighborhoods</span>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">✓</span>
+                    <span>Architectural masterpieces with modern aesthetics</span>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">✓</span>
+                    <span>Smart home technology integrated in every unit</span>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">✓</span>
+                    <span>World-class amenities including pools, gyms, and green spaces</span>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">✓</span>
+                    <span>24/7 security and concierge services</span>
+                </div>
+            </div>
+            
+            <p>Our team of experienced professionals is dedicated to helping you find your dream home that matches your lifestyle and aspirations.</p>
+            
+            <a href="#" class="btn">Schedule a Viewing</a>
+        </div>
+        
+        <div class="image-container">
+            <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Luxury Prime Home">
+        </div>
+    </div>
+    </section>
+    <!--about us section end-->
+    <!--form section start-->
+    <div class="overlay">
+        <div class="form-container">
+            <h1>Property Enquiry Form</h1>
+            
+            <div class="property-select">
+                <label for="property">Select Property</label>
+                <select id="property" name="property" required>
+                    <option value="">-- Please select a property --</option>
+                    <option value="prime-villas">Prime Villas - Luxury Waterfront</option>
+                    <option value="urban-heights">Urban Heights - Downtown Condos</option>
+                    <option value="green-acres">Green Acres - Countryside Estates</option>
+                    <option value="skyline-towers">Skyline Towers - Penthouse Collection</option>
+                    <option value="other">Other (Specify in message)</option>
+                </select>
+            </div>
+            
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="preferred-contact">Preferred Contact Method</label>
+                    <select id="preferred-contact" name="preferred-contact">
+                        <option value="email">Email</option>
+                        <option value="phone">Phone Call</option>
+                        <option value="whatsapp">WhatsApp</option>
+                        <option value="sms">Text Message</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="visit-date">Preferred Visit Date</label>
+                    <input type="date" id="visit-date" name="visit-date">
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Your Message/Questions</label>
+                    <textarea id="message" name="message" placeholder="Please include any specific requirements or questions about the property..."></textarea>
+                </div>
+                
+                <button type="submit">Submit Enquiry</button>
+            </form>
+        </div>
+    </div>
+    <!--form section end-->
+    <!--location section start-->
+    <section id="Locations">
+     <h1>Our Property <span class="highlight">Locations</span> Across India</h1>
+    
+    <div class="cities-container">
+        <!-- Mumbai -->
+        <div class="city-card">
+            <img src="https://images.unsplash.com/photo-1566438480900-0609be27a4be?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Mumbai" class="city-image">
+            <div class="city-info">
+                <div class="city-name">Mumbai</div>
+                <div class="city-location">
+                    Prime properties in South Mumbai<br>
+                    Commercial spaces in BKC<br>
+                    Residential projects in Powai
+                </div>
+            </div>
+        </div>
+        
+        <!-- Delhi -->
+        <div class="city-card">
+            <img src="https://images.unsplash.com/photo-1587474260584-136574528ed5?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Delhi" class="city-image">
+            <div class="city-info">
+                <div class="city-name">Delhi</div>
+                <div class="city-location">
+                    Luxury apartments in Gurgaon<br>
+                    Affordable housing in Noida<br>
+                    Office spaces in Connaught Place
+                </div>
+            </div>
+        </div>
+        
+        <!-- Bangalore -->
+        <div class="city-card">
+            <img src="https://t3.ftcdn.net/jpg/03/41/95/04/360_F_341950409_Gq1sN2OqYgRZrUTvPohSmgQVubaqzlA5.jpg" alt="Bangalore" class="city-image">
+            <div class="city-info">
+                <div class="city-name">Bangalore</div>
+                <div class="city-location">
+                    IT parks in Whitefield<br>
+                    Villas in Koramangala<br>
+                    Start-up offices in HSR Layout
+                </div>
+            </div>
+        </div>
+        
+        <!-- Hyderabad -->
+        <div class="city-card">
+            <img src="https://media.istockphoto.com/id/1215274990/photo/high-wide-angle-view-of-charminar-in-the-night.jpg?s=612x612&w=0&k=20&c=byyIjqgbslf-L191n6SJu0s35fvNoVeWsxV5rIPK7Sk=" alt="Hyderabad" class="city-image">
+            <div class="city-info">
+                <div class="city-name">Hyderabad</div>
+                <div class="city-location">
+                    Tech spaces in HITEC City<br>
+                    Gated communities in Gachibowli<br>
+                    Heritage properties in Old City
+                </div>
+            </div>
+        </div>
+        
+        <!-- Chennai -->
+        <div class="city-card">
+            <img src="https://media.istockphoto.com/id/471507884/photo/shore-temple-mamallapuram.jpg?s=612x612&w=0&k=20&c=QvX3e5SD4jPlznA6FBPSLm-_9fYbsf6KO94Bai-hKSU=" alt="Chennai" class="city-image">
+            <div class="city-info">
+                <div class="city-name">Chennai</div>
+                <div class="city-location">
+                    Beachfront properties in ECR<br>
+                    Industrial spaces in OMR<br>
+                    Traditional homes in Mylapore
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+    <!--location section end-->
+    <!--agent section start-->
+    <section id="Agents">
+     <h1 style="margin-top: 30px;">Our Property Agents</h1>
+    
+    <div class="agents-container">
+        <!-- Agent 1 -->
+        <div class="agent-card">
+            <img src="https://t4.ftcdn.net/jpg/06/40/07/03/360_F_640070383_9LJ3eTRSvOiwKyrmBYgcjhSlckDnNcxl.jpg" alt="Agent" class="agent-image">
+            <div class="agent-name">Himesh Yadav</div>
+            <div class="agent-city">Mumbai</div>
+            <div class="agent-contact">Himeshyadav142@gmail.com<br>7739668202</div>
+        </div>
+        
+        <!-- Agent 2 -->
+        <div class="agent-card">
+            <img src="https://i.pinimg.com/236x/cb/78/2b/cb782bd9da27e7b6dcd7974d2bb3a42e.jpg" alt="Agent" class="agent-image">
+            <div class="agent-name">Diwakar Singh</div>
+            <div class="agent-city">Banglore</div>
+            <div class="agent-contact">Diwakarsingh524@gmail.com<br>7700002435</div>
+        </div>
+        
+        <!-- Agent 3 -->
+        <div class="agent-card">
+            <img src="https://media.gettyimages.com/id/1325164545/photo/portrait-of-mature-business-men-wearing-suit-standing-against-gray-background-stock-photo.jpg?s=612x612&w=0&k=20&c=W-dzq5Y-npRbjIoKUzBt81frrsRsY84BYWH80enx3Hk=" alt="Agent" class="agent-image">
+            <div class="agent-name">David Raj</div>
+            <div class="agent-city">Chennai</div>
+            <div class="agent-contact">davidraj836@gmail.com<br>9987341673</div>
+        </div>
+        
+        <!-- Agent 4 -->
+        <div class="agent-card">
+            <img src="https://media.gettyimages.com/id/1354898601/photo/shot-of-a-young-businessman-using-a-laptop-in-a-modern-office.jpg?s=612x612&w=0&k=20&c=qhlY6BZ9CowHjWb5Fk7WNO8AI8Br6CEzL-bbtHeS8po=" alt="Agent" class="agent-image">
+            <div class="agent-name">Rohit Maurya</div>
+            <div class="agent-city">New Delhi</div>
+            <div class="agent-contact">rohitmaurya635@gmail.com<br>9934529864</div>
+        </div>
+        
+        <!-- Agent 5 -->
+        <div class="agent-card">
+            <img src="https://media.gettyimages.com/id/1369199360/photo/portrait-of-a-handsome-young-businessman-working-in-office.jpg?s=612x612&w=0&k=20&c=ujyGdu8jKI2UB5515XZA33Tt4DBhDU19dKSTUTMZvrg=" alt="Agent" class="agent-image">
+            <div class="agent-name">Himanshu Maurya</div>
+            <div class="agent-city">Hydrabad</div>
+            <div class="agent-contact">himanshu827@gmail.com<br>7734209873</div>
+        </div>
+    </div>
+    </section>
+    <!--agent section end-->
+    <!--testinomial section start-->
+    <section id="Testimonials">
+    <section class="testimonials-section">
+        <h2 class="section-title">What Our Clients Say</h2>
+        
+        <div class="testimonials-container">
+            <!-- Testimonial 1 -->
+            <div class="testimonial-slide active">
+                <p class="testimonial-content">
+                    Prime Homes exceeded all our expectations. The quality of construction and attention to detail is unmatched. 
+                    We've been living here for a year and every day feels like a luxury vacation.
+                </p>
+                <div class="client-info">
+                    <img src="https://media.gettyimages.com/id/1150096021/photo/smiling-mature-manager-sitting-at-creative-office.jpg?s=612x612&w=0&k=20&c=1iM9mdxezq9ocsrGbCSqIHFHe40l1FbY4K1dvNYuUps=" alt="Client" class="client-photo">
+                    <h3 class="client-name">Vivek Rajput</h3>
+                    <p class="client-position">Resident at Prime Villas</p>
+                </div>
+            </div>
+            
+            <!-- Testimonial 2 -->
+            <div class="testimonial-slide">
+                <p class="testimonial-content">
+                    The design team at Prime Homes truly understands modern living. Our condo has the perfect blend of style and functionality. 
+                    The amenities are world-class and the staff is always attentive to our needs.
+                </p>
+                <div class="client-info">
+                    <img src="https://media.gettyimages.com/id/1213291408/photo/happy-senior-man-at-park.jpg?s=612x612&w=0&k=20&c=6Ja6que7ELmcxA4zVwhyd-bqM-6C_gE8dqFQMb3noaM=" alt="Client" class="client-photo">
+                    <h3 class="client-name">Rohit Sen</h3>
+                    <p class="client-position">Owner at Urban Heights</p>
+                </div>
+            </div>
+            
+            <!-- Testimonial 3 -->
+            <div class="testimonial-slide">
+                <p class="testimonial-content">
+                    As an investor, I've worked with many developers, but Prime Homes stands out for their professionalism and quality. 
+                    The properties maintain their value exceptionally well and have excellent rental potential.
+                </p>
+                <div class="client-info">
+                    <img src="https://media.gettyimages.com/id/1465620151/photo/smiling-young-man-texting-on-mobile-phone-leaning-on-her-car.jpg?s=612x612&w=0&k=20&c=Mus2fX3wfBm07IU1fEAD_eqtHIzzF5kEyozNz_xjfdA=" alt="Client" class="client-photo">
+                    <h3 class="client-name">Aman singh</h3>
+                    <p class="client-position">Real Estate Investor</p>
+                </div>
+            </div>
+            
+            <!-- Testimonial 4 -->
+            <div class="testimonial-slide">
+                <p class="testimonial-content">
+                    The move-in process was seamless thanks to the Prime Homes team. They anticipated every need and made sure we were 
+                    completely satisfied before handing over the keys. Five-star service all the way!
+                </p>
+                <div class="client-info">
+                    <img src="https://media.gettyimages.com/id/628330656/photo/smiling-man-with-laptop-on-rooftop.jpg?s=612x612&w=0&k=20&c=RelGEsXmR6d3ayM6-hHXr1RdPq_8DTV1krqO44iHRek=" alt="Client" class="client-photo">
+                    <h3 class="client-name">David Rajput</h3>
+                    <p class="client-position">Resident at Skyline Towers</p>
+                </div>
+            </div>
+            
+            <!-- Testimonial 5 -->
+            <div class="testimonial-slide">
+                <p class="testimonial-content">
+                    We looked at many properties before choosing Prime Homes, and none compared in terms of quality and value. 
+                    The energy-efficient features have significantly reduced our utility bills while maintaining perfect comfort.
+                </p>
+                <div class="client-info">
+                    <img src="https://media.gettyimages.com/id/530281675/photo/happy-businessman-sitting-in-office-lobby.jpg?s=612x612&w=0&k=20&c=NH-TsgTvxJv1p54Yi5PxSYBxPrxL-0tIBZUn17duzF4=" alt="Client" class="client-photo">
+                    <h3 class="client-name">Prakash Brothers</h3>
+                    <p class="client-position">Homeowner at Green Acres</p>
+                </div>
+            </div>
+            
+            <!-- Testimonial 6 -->
+            <div class="testimonial-slide">
+                <p class="testimonial-content">
+                    The Prime Homes community is wonderful. We've made great friends with our neighbors and the social events organized 
+                    by the management are always first-class. It's more than a home, it's a lifestyle.
+                </p>
+                <div class="client-info">
+                    <img src="https://media.gettyimages.com/id/1325243885/photo/mature-man-laughing-and-smiling-on-video-conference.jpg?s=612x612&w=0&k=20&c=cVGwdRcN-X9xuQjZKnY0rY4YVeXCzQy6WvDELonhm9Q=" alt="Client" class="client-photo">
+                    <h3 class="client-name">Robert Taylor</h3>
+                    <p class="client-position">Resident at Prime Villas</p>
+                </div>
+            </div>
+            
+            <!-- Testimonial 7 -->
+            <div class="testimonial-slide">
+                <p class="testimonial-content">
+                    I was impressed by how Prime Homes incorporates smart technology throughout their properties. Controlling everything 
+                    from lighting to temperature with my phone makes daily life so convenient and futuristic.
+                </p>
+                <div class="client-info">
+                    <img src="https://media.gettyimages.com/id/1307385045/photo/close-up-of-indian-mature-men-stock-photo.jpg?s=612x612&w=0&k=20&c=ppyqkc3B8n1HMzHZ5a_GyykBwBHjdXy_3Kim_12L7cg=" alt="Client" class="client-photo">
+                    <h3 class="client-name">Ankit Bhati</h3>
+                    <p class="client-position">Tech Professional at Urban Heights</p>
+                </div>
+            </div>
+            
+            <!-- Testimonial 8 -->
+            <div class="testimonial-slide">
+                <p class="testimonial-content">
+                    The maintenance team at Prime Homes is incredibly responsive. Any minor issue we've had was addressed within hours, 
+                    often before we even noticed it ourselves. That's what I call premium service!
+                </p>
+                <div class="client-info">
+                    <img src="https://media.gettyimages.com/id/1144159484/photo/indian-farmer-at-field-stock-image.jpg?s=612x612&w=0&k=20&c=GYi4ePs3a_VxKnEaoq_6ssbVoC0jjQS7SzWk92jzBiA=" alt="Client" class="client-photo">
+                    <h3 class="client-name">Yps Bhati</h3>
+                    <p class="client-position">Resident at Skyline Towers</p>
+                </div>
+            </div>
+            
+            <!-- Testimonial 9 -->
+            <div class="testimonial-slide">
+                <p class="testimonial-content">
+                    As an interior designer, I appreciate the thoughtful layouts and high-quality finishes in Prime Homes properties. 
+                    They provide the perfect canvas for personalization while already being magazine-worthy as is.
+                </p>
+                <div class="client-info">
+                    <img src="https://media.gettyimages.com/id/1136413215/photo/young-man-at-street-market.jpg?s=612x612&w=0&k=20&c=obnaR5III0jRxHKd4ZPl3LRC2pI792KbHYR2eBzKKe8=" alt="Client" class="client-photo">
+                    <h3 class="client-name">Himanshu Maurya</h3>
+                    <p class="client-position">Interior Designer & Homeowner</p>
+                </div>
+            </div>
+            
+            <!-- Testimonial 10 -->
+            <div class="testimonial-slide">
+                <p class="testimonial-content">
+                    The resale value of our Prime Homes property was significantly higher than comparable units in the area. 
+                    The brand reputation and consistent quality make these homes excellent long-term investments.
+                </p>
+                <div class="client-info">
+                    <img src="https://media.gettyimages.com/id/1540766473/photo/young-adult-male-design-professional-smiles-for-camera.jpg?s=612x612&w=0&k=20&c=BbwgfMOtFOIJn1Km-ASix_EBbF9SHW5h0FtWbna5nFk=" alt="Client" class="client-photo">
+                    <h3 class="client-name">Saurabh Choubey</h3>
+                    <p class="client-position">Former Homeowner at Green Acres</p>
+                </div>
+            </div>
+        </div>
+        </section>
+        <div class="dots-container">
+            <span class="dot active" data-slide="0"></span>
+            <span class="dot" data-slide="1"></span>
+            <span class="dot" data-slide="2"></span>
+            <span class="dot" data-slide="3"></span>
+            <span class="dot" data-slide="4"></span>
+            <span class="dot" data-slide="5"></span>
+            <span class="dot" data-slide="6"></span>
+            <span class="dot" data-slide="7"></span>
+            <span class="dot" data-slide="8"></span>
+            <span class="dot" data-slide="9"></span>
+        </div>
+    </section>
+    <!--testinomial section end-->
+    <!--map section start--> 
+    <div>
+        <h1>Our location :</h1>
+        <P style="text-align: center; color: rgba(2, 1, 21, 0.736);">Strategically located in the heart of Delhi for your convenience and luxury living experience</P>
+  
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d112035.80905695906!2d77.16367990844712!3d28.656154348911258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfce26ec085ef%3A0x441e32f4fa5002fb!2sRed%20Fort!5e0!3m2!1sen!2sin!4v1753261534378!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+ <!--map section end-->
+ <!--footer section start-->
+</div>
+<section id="Contact">
+        <footer class="footer">
+        <div class="footer-container">
+            <!-- About Section -->
+            <div class="footer-section">
+                <div class="footer-logo">PRIME HOMES</div>
+                <p class="footer-description">
+                    Prime Homes is a premier real estate developer specializing in luxury residential properties. 
+                    We create exceptional living spaces that combine modern design with timeless elegance, 
+                    offering unparalleled comfort and sophistication.
+                </p>
+                <div class="footer-social">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            
+            <!-- Quick Links Section -->
+            <div class="footer-section">
+                <h3 class="footer-heading">Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#Home">Home</a></li>
+                    <li><a href="#Properties">Properties</a></li>
+                    <li><a href="#About_Us">About Us</a></li>
+                    <li><a href="#Testimonials">Testimonials</a></li>
+                    <li><a href="#Contact">Contact</a></li>
+                    
+                </ul>
+            </div>
+            
+            <!-- Office Details Section -->
+            <div class="footer-section">
+                <h3 class="footer-heading">Office Details</h3>
+                <ul class="contact-info">
+                    <li>
+                        <span class="contact-icon"><i class="fas fa-map-marker-alt"></i></span>
+                        <span>123 Luxury Avenue<br>New Delhi, In 0001</span>
+                    </li>
+                    <li>
+                        <span class="contact-icon"><i class="fas fa-phone-alt"></i></span>
+                        <span>7739662801</span>
+                    </li>
+                    <li>
+                        <span class="contact-icon"><i class="fas fa-envelope"></i></span>
+                        <span>info@primehomes.com</span>
+                    </li>
+                    <li>
+                        <span class="contact-icon"><i class="fas fa-clock"></i></span>
+                        <span>Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday: 10:00 AM - 4:00 PM</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            &copy; 2023 Prime Homes. All Rights Reserved.
+        </div>
+    </footer>
+    </section>
+    <!--footer section end-->
+    <!--whats app section start -->
+     <a href="https://wa.me/7739662820?text=Hi%20Prime%20Homes,%20I'm%20interested%20in%20your%20properties" 
+       class="whatsapp-float" 
+       target="_blank"
+       aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-tooltip">Chat with us</span>
+    </a>
+    <!--whats app section end-->
+    <!--Script section-->
+
+    <!--testinomial script start -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelectorAll('.testimonial-slide');
+            const dots = document.querySelectorAll('.dot');
+            let currentSlide = 0;
+            const slideInterval = 5000; // 5 seconds
+            
+            function showSlide(index) {
+                // Hide all slides
+                slides.forEach(slide => slide.classList.remove('active'));
+                dots.forEach(dot => dot.classList.remove('active'));
+                
+                // Show the selected slide
+                slides[index].classList.add('active');
+                dots[index].classList.add('active');
+                currentSlide = index;
+            }
+            
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % slides.length;
+                showSlide(currentSlide);
+            }
+            
+            // Set up automatic slideshow
+            let slideTimer = setInterval(nextSlide, slideInterval);
+            
+            // Pause on hover
+            const container = document.querySelector('.testimonials-container');
+            container.addEventListener('mouseenter', () => {
+                clearInterval(slideTimer);
+            });
+            
+            container.addEventListener('mouseleave', () => {
+                slideTimer = setInterval(nextSlide, slideInterval);
+            });
+            
+            // Dot navigation
+            dots.forEach(dot => {
+                dot.addEventListener('click', function() {
+                    const slideIndex = parseInt(this.getAttribute('data-slide'));
+                    showSlide(slideIndex);
+                    // Reset timer when manually changing slides
+                    clearInterval(slideTimer);
+                    slideTimer = setInterval(nextSlide, slideInterval);
+                });
+            });
+            
+            // Keyboard navigation
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'ArrowLeft') {
+                    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+                    showSlide(currentSlide);
+                    clearInterval(slideTimer);
+                    slideTimer = setInterval(nextSlide, slideInterval);
+                } else if (e.key === 'ArrowRight') {
+                    nextSlide();
+                    clearInterval(slideTimer);
+                    slideTimer = setInterval(nextSlide, slideInterval);
+                }
+            });
+        });
+    </script>
+    <!--testinomial script section end-->
+    <!--property slide script start-->
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const slider = document.querySelector('.slider');
+            const slides = document.querySelectorAll('.slide');
+            const prevBtn = document.querySelector('.prev-slide');
+            const nextBtn = document.querySelector('.next-slide');
+            const dots = document.querySelectorAll('.dot');
+            
+            let currentSlide = 0;
+            const slideCount = slides.length;
+            let slideInterval;
+            const intervalTime = 5000; // 5 seconds
+            
+            // Initialize slider
+            function initSlider() {
+                updateSlider();
+                startSlideShow();
+            }
+            
+            // Move to specific slide
+            function goToSlide(n) {
+                currentSlide = (n + slideCount) % slideCount;
+                updateSlider();
+                resetInterval();
+            }
+            
+            // Update slider position and dots
+            function updateSlider() {
+                slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+                
+                // Update dots
+                dots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === currentSlide);
+                });
+            }
+            
+            // Next slide
+            function nextSlide() {
+                goToSlide(currentSlide + 1);
+            }
+            
+            // Previous slide
+            function prevSlide() {
+                goToSlide(currentSlide - 1);
+            }
+            
+            // Start automatic slideshow
+            function startSlideShow() {
+                slideInterval = setInterval(nextSlide, intervalTime);
+            }
+            
+            // Reset interval timer
+            function resetInterval() {
+                clearInterval(slideInterval);
+                startSlideShow();
+            }
+            
+            // Event listeners
+            nextBtn.addEventListener('click', nextSlide);
+            prevBtn.addEventListener('click', prevSlide);
+            
+            // Dot navigation
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    goToSlide(index);
+                });
+            });
+            
+            // Pause on hover
+            slider.addEventListener('mouseenter', () => {
+                clearInterval(slideInterval);
+            });
+            
+            slider.addEventListener('mouseleave', startSlideShow);
+            
+            // Initialize the slider
+            initSlider();
+        });
+    </script>
+    <!--property slide script end-->
+     <!--header script start -->
+    <script>
+        // Mobile Menu Toggle
+        document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
+            document.querySelector('.main-nav').classList.toggle('active');
+        });
+        
+        // Sticky Header on Scroll
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.main-header');
+            if (window.scrollY > 50) {
+                header.style.padding = '10px 5%';
+                header.style.boxShadow = '0 2px 15px rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.padding = '15px 5%';
+                header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+            }
+        });
+        
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.main-nav a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.querySelector('.main-nav').classList.remove('active');
+            });
+        });
+</script>
+<!--header script end-->
+
+</body>
+</html>
